@@ -10,8 +10,8 @@ function Spa() {
               email: "paz@diez.guru",
               password: "bestdog",
               balance: 999,
-            },
-          ],
+            }
+          ]
         }}
       >
         <Route path="/" exact component={Home} />

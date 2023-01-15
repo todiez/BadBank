@@ -1,32 +1,30 @@
 function Login() {
-  const [show, setShow] = React.useState(true);
-  const [status, setStatus] = React.useState("");
+
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [login, setLogin] = React.useState(false);
 
   const ctx = React.useContext(UserContext);
-  console.log(ctx);
-  // console.log(ctx.users[0].name);
+
+  console.log(ctx.users[0]);
 
   function handleLogin() {
     console.log(email);
-    for (let i = 0; i < ctx.users.lenght; i++) {
-      if (ctx.users[i].email === email) {
+    
+      if (ctx.users[0].email === email) {
         setLogin(true);
-        return;
+        
       } else {
         console.log("user does not exist");
       }
-    }
+    
   }
 
   return (
     <Card
       txtcolor="black"
       header="Login Page"
-      status={status}
       body={
         !login ? (
           <>
