@@ -1,13 +1,32 @@
 function Balance() {
-      //access shared context with help of react native function useContext and reference
+  //access shared context with help of react native function useContext and reference
   //to the created context with UserContext
   const ctx = React.useContext(UserContext);
 
+  console.log(ctx.users[0]);
+
   return (
-    <h1>
-      Balance
-      <br />
-      {JSON.stringify(ctx)}
-    </h1>
+    <Card
+      txtcolor="black"
+      header="Balance"
+      title={
+        ctx.users[0].login ? (
+          <>            
+            {ctx.users[0].name}
+          </>
+        ) : (
+          <>Please Log in</>
+        )
+      }
+      body={
+        ctx.users[0].login ? (
+          <>            
+            {ctx.users[0].balance}
+          </>
+        ) : (
+          <></>
+        )
+      }
+    />
   );
 }

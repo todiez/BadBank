@@ -14,9 +14,10 @@ function Login() {
     
       if (ctx.users[0].email === email) {
         setLogin(true);
+        ctx.users[0].login = true;
         
       } else {
-        console.log("user does not exist");
+        alert("User does not exist!")
       }
     
   }

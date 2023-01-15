@@ -9,6 +9,7 @@ function Spa() {
               name: "Paz",
               email: "paz@diez.guru",
               password: "bestdog",
+              login: false,
               balance: 999,
             }
           ]
