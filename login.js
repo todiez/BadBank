@@ -7,19 +7,15 @@ function Login() {
 
   const ctx = React.useContext(UserContext);
 
-  console.log(ctx.users[0]);
+  
 
-  function handleLogin() {
-    console.log(email);
-    
+  function handleLogin() {   
       if (ctx.users[0].email === email) {
         setLogin(true);
-        ctx.users[0].login = true;
-        
+        ctx.users[0].login = true;        
       } else {
         alert("User does not exist!")
-      }
-    
+      }    
   }
 
   return (
