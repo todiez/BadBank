@@ -3,7 +3,6 @@ function Balance() {
   //to the created context with UserContext
   const ctx = React.useContext(UserContext);
 
-  console.log(ctx.users[0]);
 
   return (
     <Card

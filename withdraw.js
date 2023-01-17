@@ -7,25 +7,28 @@ function Withdraw() {
   const [balance, setBalance] = React.useState(ctx.users[0].balance)
 
   function handleWithdraw(e) {
-    console.log("inside handleWithdraw: " + deposit);
-    console.log(typeof(deposit))
-
+   
     if (typeof(deposit) === 'string') {
-      console.log("deposit is a string")
       let depositInt = parseInt(deposit);
       setBalance(balance + depositInt);
+      console.log(balance)   
+      ctx.users[0].balance = balance;   
+      console.log(balance)   
     } else {
       setBalance(balance + deposit);
+      ctx.users[0].balance = balance;
     }
   }
 
   return (
+
+    
     <Card
       txtcolor="black"
       header="Withdraw"
       title={ctx.users[0].login ? <>{ctx.users[0].name}</> : <>Please Log in</>}
       body={
-        !ctx.users[0].login ? (
+        ctx.users[0].login ? (
           <>
             Balance: {balance} USD
             <br />

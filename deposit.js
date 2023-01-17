@@ -7,15 +7,14 @@ function Deposit() {
   const [balance, setBalance] = React.useState(ctx.users[0].balance)
 
   function handleDeposit(e) {
-    console.log("inside handleDeposit: " + deposit);
-    console.log(typeof(deposit))
 
     if (typeof(deposit) === 'string') {
-      console.log("deposit is a string")
-      let depositInt = parseInt(deposit);
+       let depositInt = parseInt(deposit);
       setBalance(balance + depositInt);
+      ctx.users[0].balance = balance;   
     } else {
       setBalance(balance + deposit);
+      ctx.users[0].balance = balance;   
     }
   }
 
@@ -25,7 +24,7 @@ function Deposit() {
       header="Deposit"
       title={ctx.users[0].login ? <>{ctx.users[0].name}</> : <>Please Log in</>}
       body={
-        !ctx.users[0].login ? (
+        ctx.users[0].login ? (
           <>
             Balance: {balance} USD
             <br />
