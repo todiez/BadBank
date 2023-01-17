@@ -10,11 +10,11 @@ function Login() {
   
 
   function handleLogin() {   
-      if (ctx.users[0].email === email) {
+      if (ctx.users[0].email === email && ctx.users[0].password === password) {
         setLogin(true);
         ctx.users[0].login = true;        
       } else {
-        alert("User does not exist!")
+        alert("User/Password combination does not exist!")
       }    
   }
 
