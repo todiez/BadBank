@@ -10,7 +10,7 @@ function Spa() {
               email: "paz@diez.guru",
               password: "bestdog",
               login: false,
-              balance: 999.00,
+              balance: 100,
             }
           ]
         }}
