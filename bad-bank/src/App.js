@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import NavBar from "./components/Navbar";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useParams,
+} from "react-router-dom";
+import Home from "./components/Home";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <NavBar />
+      <Routes>
+        {/* <UserContext.Provider
+      value={{
+        users: [
+          {
+            name: "Paz",
+            email: "paz@diez.guru",
+            password: "bestdog",
+            login: false,
+            balance: 100,
+          }
+        ]
+      }}
+    > */}
+      <Route path="/" element={<Home />} />
+      {/* <Route path="/CreateAccount/" component={CreateAccount} />
+      <Route path="/login/" component={Login} />
+      <Route path="/deposit/" component={Deposit} />
+      <Route path="/withdraw/" component={Withdraw} />
+      <Route path="/balance/" component={Balance} />
+      <Route path="/alldata/" component={AllData} />
+    </UserContext.Provider> */}
+      </Routes>
+    </Router>
   );
 }
 
