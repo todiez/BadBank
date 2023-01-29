@@ -1,7 +1,7 @@
 import React from "react";
 import { useBankContext } from "../utils/BankContext";
 
-function Home() {
+function AllData() {
   //access shared context with help of react native function useContext and reference
   //to the created context with UserContext
   const userBase = useBankContext();
@@ -17,10 +17,10 @@ function Home() {
     //   />
     <div>
       <h1>Welcome to BAD BANK</h1>
-      <h2>Your are at Home</h2>
+      <h2>Your are at All Data</h2>
       {/* <p>context: {userBase[0].name}</p> */}
     </div>
   );
 }
 
-export default Home;
+export default AllData;

@@ -29,6 +29,11 @@ function NavBar() {
       <div className="collapse navbar-collapse" id="navbarNav">
         <div className="navbar-nav">
         <Link to="/CreateAccount">Create Account</Link>
+        <Link to="/Login">Login</Link>
+        <Link to="/Deposit">Deposit</Link>
+        <Link to="/Withdraw">Whithdraw</Link>
+        <Link to="/Balance">Balance</Link>
+        <Link to="/Alldata">All Data</Link>
           {/* <a className="nav-link" href="#/CreateAccount/">
             CreateAccount
           </a>
