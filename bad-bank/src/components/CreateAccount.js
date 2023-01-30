@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useBankContext } from "../utils/BankContext";
 
 function CreateAccount() {
   //access shared context with help of react native function useContext and reference
   //to the created context with UserContext
-  const userBase = useBankContext();
-  console.log(userBase);
+  const { bankUser, setBankUser } = useBankContext();
+  
+
+  useEffect(() => {
+    setBankUser([
+      ...bankUser,
+      { name: "Tobi", email: "t@dog.co", balance: 100 }
+    ])
+  }, [])
+  
+
 
   return (
     //   <Card

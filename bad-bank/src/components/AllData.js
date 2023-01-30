@@ -4,8 +4,10 @@ import { useBankContext } from "../utils/BankContext";
 function AllData() {
   //access shared context with help of react native function useContext and reference
   //to the created context with UserContext
-  const userBase = useBankContext();
-  console.log(userBase);
+  const { bankUser, setBankUser } = useBankContext();
+  console.log(bankUser);
+
+ 
 
   return (
     //   <Card
@@ -18,7 +20,7 @@ function AllData() {
     <div>
       <h1>Welcome to BAD BANK</h1>
       <h2>Your are at All Data</h2>
-      {/* <p>context: {userBase[0].name}</p> */}
+      <p>{JSON.stringify(bankUser)}</p>
     </div>
   );
 }
