@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useBankContext } from "../utils/BankContext";
+import { useBankContext } from "../utils/UserContext";
 
 function CreateAccount() {
   //access shared context with help of react native function useContext and reference

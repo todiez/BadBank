@@ -5,17 +5,25 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 //Styling
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 //Context
-import BankProvider from "./utils/BankContext";
+import UserProvider from "./utils/UserContext";
+import CardProvider from "./utils/CardContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BankProvider>
-      <App />
-    </BankProvider>
+
+
+
+    <UserProvider>
+     
+        <App />
+     
+    </UserProvider>
+
+   
   </React.StrictMode>
 );
 

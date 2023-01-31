@@ -7,9 +7,9 @@ function NavBar() {
       style={{background: "#e3f2fd"}}
     >
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        {/* <a className="navbar-brand" href="#">
           Navbar
-        </a>
+        </a> */}
         <button
           className="navbar-toggler"
           type="button"
@@ -24,7 +24,7 @@ function NavBar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link" to="/">
+              <Link className="nav-link active" aria-current="page" to="/">
                 Bad Bank
               </Link>
               {/* <a className="nav-link active" aria-current="page" href="#">Home</a> */}

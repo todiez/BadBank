@@ -1,5 +1,5 @@
 import React from "react";
-import { useBankContext } from "../utils/BankContext";
+import { useBankContext } from "../utils/UserContext";
 
 function AllData() {
   //access shared context with help of react native function useContext and reference
