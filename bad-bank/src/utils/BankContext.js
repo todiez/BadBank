@@ -17,7 +17,7 @@ export default function BankProvider({ children }) {
 
   return (
     <BankContext.Provider value={{ bankUser, setBankUser }}>
-      {/* with setDogInvenotry the the context dogInventory (e.g.name) can be changed */}
+      {/* with setBankuser the the context of bankUser (e.g.name) can be changed */}
       {children}
     </BankContext.Provider>
   );

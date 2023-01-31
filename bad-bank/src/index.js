@@ -3,6 +3,11 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+
+//Styling
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+//Context
 import BankProvider from "./utils/BankContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
