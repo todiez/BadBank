@@ -7,8 +7,6 @@ import {
   useParams,
 } from "react-router-dom";
 
-//Context
-import BankProvider, { useBankContext } from "./utils/BankContext";
 
 //Pages
 import Home from "./components/Home";
