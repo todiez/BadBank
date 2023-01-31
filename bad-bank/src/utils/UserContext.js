@@ -10,8 +10,8 @@ export const useBankContext = () => useContext(BankContext);
 //keyword children needs to be children and nothing else
 export default function BankProvider({ children }) {
   const [bankUser, setBankUser] = useState([
-    { name: "Paz", email: "paz@dog.co", balance: 500 },
-    { name: "IDa", email: "ida@dog.co", balance: 200 }
+    { name: "Paz", email: "paz@dog.co", password: "password", balance: 500 },
+    { name: "IDa", email: "ida@dog.co", password: "password", balance: 200 }
   ]);
   //could also be the clients of an application of the database
 
