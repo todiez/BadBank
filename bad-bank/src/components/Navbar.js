@@ -33,18 +33,12 @@ function NavBar() {
               <Link className="nav-link" to="/CreateAccount">
                 Create Account
               </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/Login">Login</Link>
-            </li>
+            </li>          
             <li className="nav-item">
               <Link className="nav-link" to="/Deposit">Deposit</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/Withdraw">Whithdraw</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/Balance">Balance</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/Alldata">All Data</Link>

@@ -48,27 +48,25 @@ function CreateAccount() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-
   function validate(field, label) {
     if (!field) {
       setStatus("Error: " + label);
-      setTimeout(() => setStatus(""), 1000);
+      setTimeout(() => setStatus(""), 100);
       return false;
     }
     return true;
   }
 
   function handleCreate() {
-    console.log(name, email, password);
     if (!validate(name, "name")) return;
     if (!validate(email, "email")) return;
     if (!validate(password, "password")) return;
-   
-          setBankUser([
-            ...bankUser,
-            { name: name, email: email, password: password, balance: 0 }
-          ])
-        
+
+    setBankUser([
+      ...bankUser,
+      { name: name, email: email, password: password, balance: 0 },
+    ]);
+
     // ctx.users.push({ name, email, password, balance: 0 });
     setShow(false);
   }

@@ -10,9 +10,9 @@ function Home() {
     <div>
       <Card
         txtcolor="black"
-        header="BadBank Landing"
-        title="Welcome to the Bank"
-        text="You can use this for nothing"
+        header="Welcome to BadBank"
+        title="Nice to see you"
+        text="You can use this for all your banking needs"
         body={<img src={pic} className="img-fluid" alt="Responsive" />}
       />
     </div>
