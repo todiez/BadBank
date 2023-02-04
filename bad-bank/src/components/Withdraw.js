@@ -9,12 +9,13 @@ function Withdraw() {
   const { bankUser, setBankUser } = useBankContext();
   console.log(bankUser);
 
-  const [deposit, setDeposit] = useState(0);
+  const [Withdraw, setWithdraw] = useState(0);
 
 
-  function handleDeposit(e) {
-    if (typeof deposit === "string") {
-      let depositInt = parseInt(deposit);
+  function handleWithdraw(e) {
+    console.log(bankUser);
+    if (typeof Withdraw === "string") {
+      let depositInt = parseInt(Withdraw);
       setBankUser(
         
         { name: "Paz", email: "paz@dog.co", password: "password", balance: bankUser[0].balance + depositInt },
@@ -28,7 +29,7 @@ function Withdraw() {
     } else {
       setBankUser(
         
-        { name: "Paz", email: "paz@dog.co", password: "password", balance: bankUser[0].balance + deposit },
+        { name: "Paz", email: "paz@dog.co", password: "password", balance: bankUser[0].balance + Withdraw },
         { name: "IDa", email: "ida@dog.co", password: "password", balance: 200 }
 
       )
@@ -48,24 +49,24 @@ function Withdraw() {
 
           <form>
             <div className="form-group">
-              <label htmlFor="deposit">Withdraw Amount:</label>
+              <label htmlFor="Withdraw">Withdraw Amount:</label>
               <br />
               <br />
               <input
                 type="number"
                 className="form-control"
-                id="deposit"
+                id="Withdraw"
                 min="-99999999"
                 max="0"
-                value={deposit}
-                onChange={(e) => setDeposit(e.currentTarget.value)}
+                value={Withdraw}
+                onChange={(e) => setWithdraw(e.currentTarget.value)}
               />
             </div>
             <br />
             <button
               type="submit"
               className="btn btn-light"
-              onClick={handleDeposit}
+              onClick={handleWithdraw}
             >
               Withdraw
             </button>

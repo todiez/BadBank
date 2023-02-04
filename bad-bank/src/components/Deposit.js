@@ -14,17 +14,14 @@ function Deposit() {
 
 
   function handleDeposit(e) {
-    console.log(deposit);
-
-    if (typeof (deposit) === "string") {
+    console.log(bankUser);
+    if (typeof deposit === "string") {
       let depositInt = parseInt(deposit);
-
-      const newBankUser = [ { name: "Paz", email: "paz@dog.co", password: "password", balance: bankUser[0].balance + depositInt },
-      { name: "IDa", email: "ida@dog.co", password: "password", balance: 200 }]
-
       setBankUser(
         
-       newBankUser
+        { name: "Paz", email: "paz@dog.co", password: "password", balance: bankUser[0].balance + depositInt },
+        { name: "IDa", email: "ida@dog.co", password: "password", balance: 200 }
+
       )
       console.log(bankUser);
 
@@ -46,7 +43,7 @@ function Deposit() {
     <Card
       txtcolor="black"
       header="Deposit"
-      title={"Balance: $" + bankUser[0].balance}
+      title={"Balance: $" }
       body={
         <>
           <br />

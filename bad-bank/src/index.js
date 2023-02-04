@@ -7,9 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 //Styling
 import "bootstrap/dist/css/bootstrap.min.css";
 
-//Context
-import UserProvider from "./utils/UserContext";
-import CardProvider from "./utils/CardContext";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,11 +15,11 @@ root.render(
 
 
 
-    <UserProvider>
+    
      
         <App />
      
-    </UserProvider>
+  
 
    
   </React.StrictMode>
