@@ -8,8 +8,7 @@ function Home() {
 
   return (
     <div>
-      <Card
-        txtcolor="black"
+      <Card        
         header="Welcome to BadBank"
         title="Nice to see you"
         text="You can use this for all your banking needs"
